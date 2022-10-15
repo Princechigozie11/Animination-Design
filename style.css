@@ -33,7 +33,7 @@ html {
   position: relative;
   animation: slide-right 4s infinite linear 3s;
 }
-.top-down {
+.top_down {
   width: 100px;
   height: 100px;
   background-color: dodgerblue;
