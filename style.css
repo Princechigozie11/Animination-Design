@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+  display: grid;
+  place-items: center;
+  position: relative;
+  animation: slide-body 20s infinite ease-in-out;
+}
+.container {
+  display: grid;
+  grid-template-areas: "left right";
+}
+.left-ball {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  grid-area: left;
+  position: relative;
+  animation: slide-left 4s infinite linear 3s;
+}
+.right-ball {
+  width: 100px;
+  height: 100px;
+  background-color: burlywood;
+  grid-area: right;
+  position: relative;
+  animation: slide-right 4s infinite linear 3s;
+}
+.top-down {
+  width: 100px;
+  height: 100px;
+  background-color: dodgerblue;
+  margin-left: 4em;
+  position: relative;
+  animation: slide-up 4s infinite linear 3s;
+}
+@keyframes slide-left {
+  0% {
+    margin-left: 0%;
+  }
+  25% {
+    background-color: white;
+    border-radius: 25%;
+  }
+  50% {
+    background-color: burlywood;
+    border-radius: 50%;
+  }
+  100% {
+    background-color: red;
+    margin-left: -500%;
+    border-radius: 100%;
+  }
+}
+@keyframes slide-right {
+  0% {
+    margin-left: -0%;
+  }
+  25% {
+    background-color: white;
+    border-radius: 25%;
+  }
+  50% {
+    background-color: burlywood;
+    border-radius: 50%;
+  }
+  100% {
+    background-color: red;
+    margin-left: 500%;
+    border-radius: 100%;
+  }
+}
+@keyframes slide-up {
+  0% {
+    background-color: darkgray;
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: white;
+    border-radius: 25%;
+    transform: rotate(360deg);
+  }
+  50% {
+    background-color: burlywood;
+    border-radius: 50%;
+    transform: rotateX("0deg");
+  }
+  100% {
+    background-color: red;
+    border-radius: 100%;
+    transform: rotateX("360deg");
+  }
+}
+@keyframes slide-body {
+  0% {
+    background-color: aliceblue;
+  }
+  25% {
+    background-color: black;
+  }
+  50% {
+    background-color: darkslategray;
+  }
+  100% {
+    background-color: indigo;
+  }
+}
